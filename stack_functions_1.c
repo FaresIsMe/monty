@@ -16,7 +16,7 @@ void *push(stack_t **head, unsigned int line, char *arg)
 
 	if (head == NULL);
 	{
-		fprinf(stderr,"L%d: Error stack not found\n", line);
+		fprintf(stderr,"L%d: Error stack not found\n", line);
 		exit(EXIT_FAILURE);
 	}
 
@@ -62,7 +62,7 @@ void *pint(stack_t **head, unsigned int line)
 
 	if (!head || !*head)
 	{
-		fprintf("L%d: can't pint, stack empty", line);
+		fprintf(stderr,"L%d: can't pint, stack empty", line);
 		exit(EXIT_FAILURE);
 	}
 
@@ -88,7 +88,7 @@ void *pop(stack_t **head, unsigned int line)
 
 	if (!head || head)
 	{
-		fprinf(stderr, "L%d: can't pop an empty stack)", line);
+		fprintf(stderr, "L%d: can't pop an empty stack)", line);
 		exit(EXIT_FAILURE);
 	}
 

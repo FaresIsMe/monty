@@ -13,7 +13,7 @@ void *add(stack_t **head, unsigned int line)
 
     if ((*head)->next == NULL)
     {
-        fprinf(stderr,"L%d: can't", line);
+        fprintf(stderr,"L%d: can't", line);
         exit(EXIT_FAILURE);
     }
     temp = (*head)->next;

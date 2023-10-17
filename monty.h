@@ -60,7 +60,8 @@ int _strcmp(char *X, char *Y);
 int readingTheFile(FILE *, stack_t **);
 void readingTheCommand(char *, size_t, unsigned int, stack_t **);
 void (*findingMyFunction(char *, char *,
-unsigned int , stack_t **))(stack_t **, unsigned int)
-void callingTheFunction(stack_t **, unsigned int);
+unsigned int , stack_t **))(stack_t **, unsigned int);
+void callingTheFunction(char *myCommand, char *value,
+unsigned int myLineN, stack_t **myStack);
 
 #endif /*MONTY_H*/

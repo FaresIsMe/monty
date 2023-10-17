@@ -43,7 +43,7 @@ unsigned int myLineN, stack_t **myStack)
 	if (myCommandCode == NULL)
 		return;
 	value = strtok(NULL, "\n ");
-	callingTheFunction(myCommandCode, value, myLine, myStack);
+	callingTheFunction(myCommandCode, value, myLineN, myStack);
 }
 
 /**
@@ -87,11 +87,11 @@ unsigned int myLine, stack_t **myStack))
 		if (_strcmp(myInstruction[i].opcode, myFO) == 0)
 		{
 			if (_strcmp(myFO, "push") == 0)
-				push(myStack, myLine);
+				push(myStack, myLine, myValue);
 			return (myInstruction[i].f);
 		}
 	}
-	fprintf("L%d: unknown instruction %s", myLine,myFO);
+	fprintf("L%d: unknown instruction %s", myLine, myFO);
 	exit(EXIT_FAILURE);
 }
 
@@ -106,7 +106,7 @@ unsigned int myLine, stack_t **myStack))
  * Return: Nothing (void)
 */
 
-void callingTheFunction(char *myCommand, int value,
+void callingTheFunction(char *myCommand, char *value,
 unsigned int myLineN, stack_t **myStack)
 {
 	void (*myFunction)(stack_t **, unsigned int) = findingMyFunction
