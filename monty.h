@@ -54,6 +54,6 @@ int _strcmp(char *X, char *Y);
 /*Handling The File*/
 int readingTheFile(FILE *);
 void readingTheCommand(char *, size_t);
-void findingMyFunction(char *, char *);
+void (*findingMyFunction(char *myFO, char *myValue))(stack_t **, unsigned int);
 
 #endif /*MONTY_H*/
