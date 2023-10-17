@@ -39,6 +39,11 @@ typedef struct instruction_s
 size_t print_dlistint(const stack_t *h);
 stack_t*add_dnodeint(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
+stack_t *add_nodeint_end(stack_t **head, const int n);
+
+/*stack_function_1*/
+void *push(stack_t **head, unsigned int line, char *arg)
+
 
 /*String Functions*/
 int _strcmp(char *X, char *Y);
