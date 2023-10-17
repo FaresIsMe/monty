@@ -62,7 +62,7 @@ void *pint(stack_t **head, unsigned int line)
 
 	if (!head || !*head)
 	{
-		fprintf("L<line_number>: can't pint, stack empty", line);
+		fprintf("L%d: can't pint, stack empty", line);
 		exit(EXIT_FAILURE);
 	}
 
@@ -73,4 +73,34 @@ void *pint(stack_t **head, unsigned int line)
 		temp = temp->prev;
 	}
 	printf("%d\n", temp->n);
+}
+
+/**
+ * pop - removes the top element of the stack.
+ * @line: The line number
+ * 
+ * Return: nothing
+*/
+
+void *pop(stack_t **head, unsigned int line)
+{
+	(void)line;
+
+	if (!head || head)
+	{
+		fprinf(stderr, "L%d: can't pop an empty stack)", line);
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*head)->next != NULL)
+	{
+		*head = (*head)->next;
+		free((*head)->prev);
+		(*head)->prev = NULL;
+	}
+	else
+	{
+		free(*head);
+		*head = NULL;
+	}
 }

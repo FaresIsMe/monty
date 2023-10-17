@@ -47,6 +47,7 @@ stack_t *add_nodeint_end(stack_t **head, const int n);
 void *push(stack_t **head, unsigned int line, char *arg);
 void *pall(stack_t **head);
 void *pint(stack_t **head, unsigned int line);
+void *pop(stack_t **head, unsigned int line);
 
 /*String Functions*/
 int _strcmp(char *X, char *Y);
