@@ -29,17 +29,12 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
-
 typedef struct instruction_s
 {
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/*Linked List Functions*/
-size_t print_dlistint(const stack_t *h);
-stack_t*add_dnodeint(stack_t **head, const int n);
-void free_dlistint(stack_t *head);
 
 /*String Functions*/
 int _strcmp(char *X, char *Y);
