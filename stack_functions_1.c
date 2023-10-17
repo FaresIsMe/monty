@@ -2,7 +2,7 @@
 
 
 /**
- * add_dnodeint - A function to add a node at the beginning
+ * push - A function to add a node at the beginning
  * @head: A pointer to a pointer that points to the head
  * @line: The line number
  * @arg: arguments
@@ -14,9 +14,9 @@ void push(stack_t **head, unsigned int line, char *arg)
 {
 	stack_t *node = NULL;
 
-	if (head == NULL);
+	if (head == NULL)
 	{
-		fprintf(stderr,"L%d: Error stack not found\n", line);
+		fprintf(stderr, "L%d: Error stack not found\n", line);
 		exit(EXIT_FAILURE);
 	}
 
@@ -32,16 +32,17 @@ void push(stack_t **head, unsigned int line, char *arg)
 }
 
 /**
- * pall - prints all the values on the stack, starting from the top of the stack
+ * pall - prints all the values on the stack, starting from the top of
+ * the stack
  * @head: points to the address of the stack's last node added
  * @line: The line number
- * 
+ *
  * Return: nothing
 */
 void pall(stack_t **head, unsigned int line)
 {
 	stack_t *temp = *head;
-	
+
 	while (temp)
 	{
 		printf("%d\n", temp->n);
@@ -49,11 +50,11 @@ void pall(stack_t **head, unsigned int line)
 	}
 }
 
- /**
+/**
   * pint -  prints the value at the top of the stack
   * @head: points to the stacks first node
   * @line: The line number
-  * 
+  *
   * Return: nothing
  */
 void pint(stack_t **head, unsigned int line)
@@ -62,7 +63,7 @@ void pint(stack_t **head, unsigned int line)
 
 	if (!head || !*head)
 	{
-		fprintf(stderr,"L%d: can't pint, stack empty", line);
+		fprintf(stderr, "L%d: can't pint, stack empty", line);
 		exit(EXIT_FAILURE);
 	}
 
@@ -77,8 +78,9 @@ void pint(stack_t **head, unsigned int line)
 
 /**
  * pop - removes the top element of the stack.
+ * @head: A pointer to a pointer that points to the head
  * @line: The line number
- * 
+ *
  * Return: nothing
 */
 

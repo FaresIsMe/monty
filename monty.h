@@ -17,9 +17,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -32,8 +32,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /*Linked List Functions*/
@@ -44,10 +44,10 @@ stack_t *add_nodeint_end(stack_t **head, const int n);
 
 
 /*stack_functions_1*/
-void *push(stack_t **head, unsigned int line, char *arg);
-void *pall(stack_t **head, unsigned int line);
-void *pint(stack_t **head, unsigned int line);
-void *pop(stack_t **head, unsigned int line);
+void push(stack_t **head, unsigned int line, char *arg);
+void pall(stack_t **head, unsigned int line);
+void pint(stack_t **head, unsigned int line);
+void pop(stack_t **head, unsigned int line);
 
 
 /*stack_functions_2*/
@@ -60,7 +60,7 @@ int _strcmp(char *X, char *Y);
 int readingTheFile(FILE *, stack_t **);
 void readingTheCommand(char *, size_t, unsigned int, stack_t **);
 void (*findingMyFunction(char *, char *,
-unsigned int , stack_t **))(stack_t **, unsigned int);
+unsigned int, stack_t **))(stack_t **, unsigned int);
 void callingTheFunction(char *myCommand, char *value,
 unsigned int myLineN, stack_t **myStack);
 

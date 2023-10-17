@@ -29,7 +29,7 @@ size_t print_dlistint(const stack_t *h)
  * Return: NULL or a pointer to the newly created node
 */
 
-stack_t*add_dnodeint(stack_t **head, const int n)
+stack_t *add_dnodeint(stack_t **head, const int n)
 {
 	stack_t *newNode;
 

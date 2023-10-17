@@ -4,7 +4,7 @@
  * readingTheFile - A function to read the file
  * @myFile: A pointer to the file that is being read
  * @myStack: A double pointer to my stack
- * 
+ *
  * Return: The status of the function
 */
 
@@ -31,7 +31,7 @@ int readingTheFile(FILE *myFile, stack_t **myStack)
  * @lineLength: The length of the line
  * @myLineN: The number of the line
  * @myStack: A double pointer to the stack
- * 
+ *
  * Return: Nothing (void)
 */
 
@@ -39,6 +39,7 @@ void readingTheCommand(char *myLine, size_t lineLength,
 unsigned int myLineN, stack_t **myStack)
 {
 	char *myCommandCode, *value;
+
 	myCommandCode = strtok(myLine, "\n ");
 	if (myCommandCode == NULL)
 		return;
@@ -53,7 +54,7 @@ unsigned int myLineN, stack_t **myStack)
  * @myValue: The value for push function
  * @myLine: The number of the line
  * @myStack: A double pointer to the stack
- * 
+ *
  * Return: A pointer to the required function
 */
 
@@ -62,8 +63,7 @@ unsigned int myLine, stack_t **myStack))
 (stack_t **, unsigned int)
 {
 	int i;
-	instruction_t myInstruction[] ={
-		{"push", push},
+	instruction_t myInstruction[] = {
 		{"pall", pall},
 		{"pint", pint},
 		/*
@@ -81,15 +81,14 @@ unsigned int myLine, stack_t **myStack))
 		{"rotr", rotr},
 		*/
 		{NULL, NULL}
-	};
+		};
+
+	if (_strcmp(myFO, "push") == 0)
+		push(myStack, myLine, myValue);
 	for (i = 0; myInstruction[i].opcode != NULL; i++)
 	{
 		if (_strcmp(myInstruction[i].opcode, myFO) == 0)
-		{
-			if (_strcmp(myFO, "push") == 0)
-				push(myStack, myLine, myValue);
 			return (myInstruction[i].f);
-		}
 	}
 	fprintf(stderr, "L%d: unknown instruction %s", myLine, myFO);
 	exit(EXIT_FAILURE);
@@ -102,7 +101,7 @@ unsigned int myLine, stack_t **myStack))
  * @myValue: The value for push function
  * @myLineN: The number of the line
  * @myStack: A double pointer to the stack
- * 
+ *
  * Return: Nothing (void)
 */
 
