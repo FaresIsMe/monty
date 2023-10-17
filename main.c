@@ -18,11 +18,12 @@ int main(int argc, char **argv)
         exit(EXIT_FAILURE);
     }
     if (argv[1] != NULL)
-        myFile = fopen(argv[1], 'r');
+        myFile = fopen(argv[1], "r");
     if (myFile == NULL)
     {
         fprintf(stderr, "Error: Can't open file %s", argv[1]);
         exit(EXIT_FAILURE);
     }
-    readingMyFile();
+    readingTheFile(myFile);
+    fclose(myFile);
 }
