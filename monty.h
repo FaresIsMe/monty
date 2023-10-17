@@ -44,6 +44,7 @@ stack_t *add_nodeint_end(stack_t **head, const int n);
 /*stack_function_1*/
 void *push(stack_t **head, unsigned int line, char *arg)
 void *pall(stack_t **head);
+void *pint(stack_t **head, unsigned int line)
 
 
 /*String Functions*/
