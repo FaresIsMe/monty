@@ -42,12 +42,6 @@ stack_t*add_dnodeint(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
 stack_t *add_nodeint_end(stack_t **head, const int n);
 
-/*stack_function_1*/
-void *push(stack_t **head, unsigned int line, char *arg)
-void *pall(stack_t **head);
-void *pint(stack_t **head, unsigned int line)
-
-stack_t *add_nodeint_end(stack_t **head, const int n);
 
 /*stack_function_1*/
 void *push(stack_t **head, unsigned int line, char *arg);
