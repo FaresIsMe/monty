@@ -47,3 +47,30 @@ void *pall(stack_t **head)
 		temp = temp->next;
 	}
 }
+
+ /**
+  * pint -  prints the value at the top of the stack
+  * @head: points to the stacks first node
+  * @line: The line number
+  * 
+  * Return: nothing
+ */
+void *pint(stack_t **head, unsigned int line)
+{
+	stack_t *temp  = *head;
+	(void)line;
+
+	if (!head || !*head)
+	{
+		fprintf("L<line_number>: can't pint, stack empty", line);
+		exit(EXIT_FAILURE);
+	}
+
+	while (temp)
+	{
+		if (temp->prev == NULL)
+			break;
+		temp = temp->prev;
+	}
+	printf("%d\n", temp->n);
+}
