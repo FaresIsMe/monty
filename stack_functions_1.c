@@ -34,10 +34,11 @@ void *push(stack_t **head, unsigned int line, char *arg)
 /**
  * pall - prints all the values on the stack, starting from the top of the stack
  * @head: points to the address of the stack's last node added
+ * @line: The line number
  * 
  * Return: nothing
 */
-void *pall(stack_t **head)
+void *pall(stack_t **head, unsigned int line)
 {
 	stack_t *temp = *head;
 	
@@ -58,7 +59,6 @@ void *pall(stack_t **head)
 void *pint(stack_t **head, unsigned int line)
 {
 	stack_t *temp  = *head;
-	(void)line;
 
 	if (!head || !*head)
 	{
