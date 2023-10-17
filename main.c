@@ -24,6 +24,6 @@ int main(int argc, char **argv)
         fprintf(stderr, "Error: Can't open file %s", argv[1]);
         exit(EXIT_FAILURE);
     }
-    readingTheFile(myFile);
+    readingTheFile(myFile, &myStack);
     fclose(myFile);
 }

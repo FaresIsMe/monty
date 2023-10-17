@@ -53,8 +53,10 @@ void *pop(stack_t **head, unsigned int line);
 int _strcmp(char *X, char *Y);
 
 /*Handling The File*/
-int readingTheFile(FILE *);
-void readingTheCommand(char *, size_t);
-void (*findingMyFunction(char *myFO, char *myValue))(stack_t **, unsigned int);
+int readingTheFile(FILE *, stack_t **);
+void readingTheCommand(char *, size_t, unsigned int, stack_t **);
+void (*findingMyFunction(char *, char *,
+unsigned int , stack_t **))(stack_t **, unsigned int)
+void callingTheFunction(stack_t **, unsigned int);
 
 #endif /*MONTY_H*/
