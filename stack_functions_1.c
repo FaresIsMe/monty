@@ -10,7 +10,7 @@
  * Return: nothing
 */
 
-void *push(stack_t **head, unsigned int line, char *arg)
+void push(stack_t **head, unsigned int line, char *arg)
 {
 	stack_t *node = NULL;
 
@@ -20,7 +20,7 @@ void *push(stack_t **head, unsigned int line, char *arg)
 		exit(EXIT_FAILURE);
 	}
 
-	node = add_dnodeint(&head, atoi(arg));
+	node = add_dnodeint(head, atoi(arg));
 
 	if (node == NULL)
 	{
@@ -38,7 +38,7 @@ void *push(stack_t **head, unsigned int line, char *arg)
  * 
  * Return: nothing
 */
-void *pall(stack_t **head, unsigned int line)
+void pall(stack_t **head, unsigned int line)
 {
 	stack_t *temp = *head;
 	
@@ -56,7 +56,7 @@ void *pall(stack_t **head, unsigned int line)
   * 
   * Return: nothing
  */
-void *pint(stack_t **head, unsigned int line)
+void pint(stack_t **head, unsigned int line)
 {
 	stack_t *temp  = *head;
 
@@ -82,7 +82,7 @@ void *pint(stack_t **head, unsigned int line)
  * Return: nothing
 */
 
-void *pop(stack_t **head, unsigned int line)
+void pop(stack_t **head, unsigned int line)
 {
 	(void)line;
 

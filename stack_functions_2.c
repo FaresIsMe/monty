@@ -18,6 +18,6 @@ void *add(stack_t **head, unsigned int line)
     }
     temp = (*head)->next;
     temp->n = temp->n + (*head)->n;
-    pop(&head, line);
+    pop(head, line);
     *head = temp;
 }

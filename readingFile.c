@@ -91,7 +91,7 @@ unsigned int myLine, stack_t **myStack))
 			return (myInstruction[i].f);
 		}
 	}
-	fprintf("L%d: unknown instruction %s", myLine, myFO);
+	fprintf(stderr, "L%d: unknown instruction %s", myLine, myFO);
 	exit(EXIT_FAILURE);
 }
 

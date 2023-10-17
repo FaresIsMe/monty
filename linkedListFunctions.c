@@ -97,5 +97,5 @@ stack_t *add_nodeint_end(stack_t **head, const int n)
 		*head = new_end;
 		new_end->prev = NULL;
 	}
-	return (head);
+	return (*head);
 }

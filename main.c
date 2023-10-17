@@ -12,13 +12,13 @@ int main(int argc, char **argv)
 {
     stack_t *myStack;
     FILE *myFile;
-    if (argc != 2)
-    {
-        fprintf(stderr, "USAGE: monty file\n");
-        exit(EXIT_FAILURE);
-    }
-    if (argv[1] != NULL)
-        myFile = fopen(argv[1], "r");
+    // if (argc != 2)
+    // {
+    //     fprintf(stderr, "USAGE: monty file\n");
+    //     exit(EXIT_FAILURE);
+    // }
+    // if (argv[1] != NULL)
+        myFile = fopen("testFile", "r");
     if (myFile == NULL)
     {
         fprintf(stderr, "Error: Can't open file %s", argv[1]);
