@@ -65,3 +65,35 @@ void free_dlistint(stack_t *head)
 	}
 	head = NULL;
 }
+
+/**
+ * add_dnodeint_end - adds a new node at the beginning of a stack_t list.
+ * @head: Head of the list pointer.
+ * @n: int to set in the new node.
+ * Return: address of the new element, or NULL if it failed
+*/
+stack_t *add_dnodeint_end(stack_t **head, const int n)
+{
+	stack_t *new_end, *temp = *head;
+
+	new_end = malloc(sizeof(stack_t));
+	if (new_end == NULL)
+		return (NULL);
+
+	new_end->n = n;
+	new_end->next = NULL;
+
+	if (temp)
+	{
+		while (temp->next)
+			temp = temp->next;
+		new_end->prev = temp;
+		temp->next = new_end;
+	}
+	else
+	{
+		*head = new_end;
+		new_end->prev = NULL;
+	}
+	return (new_end);
+}
