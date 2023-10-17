@@ -14,7 +14,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 {
 	stack_t *node = NULL;
 
-	if (head == NULL)
+	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: Error stack not found\n", line);
 		exit(EXIT_FAILURE);
