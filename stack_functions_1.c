@@ -21,7 +21,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 		if (arg[i] > 57 || arg[i] < 48)
 		{
 			fprintf(stderr, "L%d: usage: push integer", line);
-			exit (EXIT_FAILURE);
+			exit(EXIT_FAILURE);
 		}
 	}
 
@@ -110,4 +110,17 @@ void pop(stack_t **head, unsigned int line)
 		free(*head);
 		*head = NULL;
 	}
+}
+
+/**
+ * nop - doesn't do anything
+ * @head: A pointer to a pointer that points to the head
+ * @line: The line count
+ *
+ * Return: Nothing
+*/
+void nop(stack_t **head, unsigned int line)
+{
+	(void)head;
+	(void)line;
 }

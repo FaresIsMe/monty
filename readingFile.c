@@ -47,19 +47,22 @@ unsigned int myLineN, stack_t **myStack)
 }
 
 /**
- * findingMyFunction - A function to find the pointer
- * to the required function
- * @myFO: The commmand line
- * @myValue: The value for push function
- * @myLine: The number of the line
- * @myStack: A double pointer to the stack
+ * findingMyFunction - Finds and returns the
+ * appropriate function based on the given instruction.
+ * @myFO: The instruction to be searched.
+ * @myValue: The value associated with the instruction (for push).
+ * @myLine: The line number of the instruction.
+ * @myStack: A pointer to the stack.
  *
- * Return: A pointer to the required function
-*/
+ * Return: A function pointer to the corresponding instruction function.
+ * If the instruction is "push", it performs the push
+ * operation and returns NULL.
+ * If the instruction is found in the
+ * instruction list, it returns the corresponding function.
+ * Otherwise, it prints an error message and exits the program.
+ */
 
-void (*findingMyFunction(char *myFO, char *myValue,
-unsigned int myLine, stack_t **myStack))
-(stack_t **, unsigned int)
+void (*findingMyFunction(char *myFO, char *myValue, unsigned int myLine, stack_t **myStack))(stack_t **, unsigned int)
 {
 	int i;
 	instruction_t myInstruction[] = {
@@ -67,9 +70,9 @@ unsigned int myLine, stack_t **myStack))
 		{"pint", pint},
 		{"pop", pop},
 		{"add", add},
+		{"nop", nop},
 		/*
 		{"swap", swap},
-		{"nop", nop},
 		{"sub", sub},
 		{"div", div},
 		{"mul", mul},
@@ -100,7 +103,7 @@ unsigned int myLine, stack_t **myStack))
  * callingTheFunction - A function to calls findingMyFunction
  * function, in other words it gets the pointer and execute the function
  * @myCommand: The command line
- * @myValue: The value for push function
+ * @value: The value for push function
  * @myLineN: The number of the line
  * @myStack: A double pointer to the stack
  *

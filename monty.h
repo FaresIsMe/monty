@@ -47,7 +47,7 @@ void push(stack_t **head, unsigned int line, char *arg);
 void pall(stack_t **head, unsigned int line);
 void pint(stack_t **head, unsigned int line);
 void pop(stack_t **head, unsigned int line);
-
+void nop(stack_t **head, unsigned int line);
 
 /*stack_functions_2*/
 void add(stack_t **head, unsigned int line);
