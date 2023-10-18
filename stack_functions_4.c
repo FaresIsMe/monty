@@ -35,23 +35,25 @@ void puttingChar(stack_t **head, unsigned int line)
  * @head: A pointer to a pointer that points
  * to the head of the stack
  * @line: The line number
- * 
+ *
  * Return: Nothing
 */
 
 void puttingString(stack_t **head, unsigned int line)
 {
+	stack_t *current;
 	int myVar;
 
 	(void)line;
-	if (!*head || !head)
+	if (!(*head) || !head)
 	{
 		printf("\n");
 		return;
 	}
-	while (*head != NULL)
+	current = *head;
+	while (current != NULL)
 	{
-		myVar = (*head)->n;
+		myVar = current->n;
 		if ((myVar >= 65 && myVar <= 90) || (myVar >= 97 && myVar <= 122))
 			printf("%c", myVar);
 		else if (myVar == 0)
@@ -64,7 +66,7 @@ void puttingString(stack_t **head, unsigned int line)
 			printf("\n");
 			return;
 		}
-		(*head) = (*head)->next;
+		current = current->next;
 	}
 	printf("\n");
 }
