@@ -18,7 +18,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 	len = strlen(arg);
 	for (i = 0; i < len; i++)
 	{
-		if (arg[i] > 57 && arg[i] < 48)
+		if (!isdigit(arg[i]))
 		{
 			fprintf(stderr, "L%d: usage: push integer", line);
 			exit(EXIT_FAILURE);
