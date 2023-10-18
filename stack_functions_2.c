@@ -43,7 +43,7 @@ void sub(stack_t **head, unsigned int line)
 }
 
 /**
- * sub -  sub the top two elements of the stack.
+ * division - sub the top two elements of the stack.
  * @head: points to the address of the stack's last node added
  * @line: The line number
  *
@@ -66,5 +66,27 @@ void division(stack_t **head, unsigned int line)
 	}
 	temp = (*head)->next;
 	temp->n = temp->n / temp->prev->n;
+	pop(head, line);
+}
+
+/**
+ * multiplication -  sub the top two elements of the stack.
+ * @head: points to the address of the stack's last node added
+ * @line: The line number
+ *
+ * Return: nothing
+*/
+
+void multiplication(stack_t **head, unsigned int line)
+{
+	stack_t *temp = NULL;
+
+	if (!*head || !(*head)->next) 
+	{
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line);
+		exit(EXIT_FAILURE);
+	}
+	temp = (*head)->next;
+	temp->n = temp->n * temp->prev->n;
 	pop(head, line);
 }

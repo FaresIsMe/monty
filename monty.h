@@ -53,6 +53,7 @@ void nop(stack_t **head, unsigned int line);
 void add(stack_t **head, unsigned int line);
 void sub(stack_t **head, unsigned int line);
 void division(stack_t **head, unsigned int line);
+void multiplication(stack_t **head, unsigned int line);
 /*String Functions*/
 int _strcmp(char *X, char *Y);
 
