@@ -28,13 +28,17 @@ void mod(stack_t **head, unsigned int line)
 	temp->n = temp->n % temp->prev->n;
 	pop(head, line);
 }
+
+
 /**
+ * 
  * swap - swaps the top two elements of the stack.
  * @head: points to the address of the stack's last node added
  * @line: The line number
- *
+ * 
  * Return: nothing
 */
+
 void swap(stack_t **head, unsigned int line)
 {
 	stack_t *temp = NULL;
