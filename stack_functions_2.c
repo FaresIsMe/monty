@@ -54,7 +54,7 @@ void division(stack_t **head, unsigned int line)
 {
 	stack_t *temp = NULL;
 
-	if (!*head || !(*head)->next) 
+	if (!*head || !(*head)->next)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", line);
 		exit(EXIT_FAILURE);
@@ -81,7 +81,7 @@ void multiplication(stack_t **head, unsigned int line)
 {
 	stack_t *temp = NULL;
 
-	if (!*head || !(*head)->next) 
+	if (!*head || !(*head)->next)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", line);
 		exit(EXIT_FAILURE);
