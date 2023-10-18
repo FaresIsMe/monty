@@ -21,6 +21,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 		if (!isdigit(arg[i]))
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line);
+			free_dlistint(*head);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -30,6 +31,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 	if (node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		free_dlistint(*head);
 		exit(EXIT_FAILURE);
 	}
 
