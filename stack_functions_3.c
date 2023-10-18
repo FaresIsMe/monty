@@ -65,6 +65,8 @@ void swap(stack_t **head, unsigned int line)
 */
 void rotl(stack_t **head, unsigned int line)
 {
+	(void)line;
+
 	if (*head == NULL || (*head)->next == NULL)
 		return;
 
@@ -77,6 +79,4 @@ void rotl(stack_t **head, unsigned int line)
 	*head = (*head)->next;
 	(*head)->prev->next = NULL;
 	(*head)->prev = NULL;
-
-	(void)line;
 }
