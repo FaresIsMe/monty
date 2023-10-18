@@ -13,11 +13,16 @@
 void push(stack_t **head, unsigned int line, char *arg)
 {
 	stack_t *node = NULL;
+	int len = 0, i;
 
-	if (*head == NULL)
+	len = strlen(arg);
+	for (i = 0; i < len; i++)
 	{
-		fprintf(stderr, "L%d: Error stack not found\n", line);
-		exit(EXIT_FAILURE);
+		if (arg[i] > 57 || arg[i] < 48)
+		{
+			fprintf(stderr, "L%d: usage: push integer", line);
+			exit (EXIT_FAILURE);
+		}
 	}
 
 	node = add_dnodeint(head, atoi(arg));
