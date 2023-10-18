@@ -26,6 +26,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	readingTheFile(myFile, &myStack);
+	free_dlistint(myStack);
 	fclose(myFile);
 	return (EXIT_SUCCESS);
 }

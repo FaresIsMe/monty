@@ -65,10 +65,10 @@ unsigned int myLine, stack_t **myStack))
 	instruction_t myInstruction[] = {
 		{"pall", pall},
 		{"pint", pint},
-		/*
 		{"pop", pop},
-		{"swap", swap},
 		{"add", add},
+		/*
+		{"swap", swap},
 		{"nop", nop},
 		{"sub", sub},
 		{"div", div},
