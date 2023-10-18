@@ -18,7 +18,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 	len = strlen(arg);
 	for (i = 0; i < len; i++)
 	{
-		if (arg[i] > 57 || arg[i] < 48)
+		if (arg[i] > 57 && arg[i] < 48)
 		{
 			fprintf(stderr, "L%d: usage: push integer", line);
 			exit(EXIT_FAILURE);
@@ -68,7 +68,7 @@ void pint(stack_t **head, unsigned int line)
 
 	if (!head || !*head)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty", line);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line);
 		exit(EXIT_FAILURE);
 	}
 
