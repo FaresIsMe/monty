@@ -76,11 +76,15 @@ void (*findingMyFunction(char *myFO, char *myValue, unsigned int myLine, stack_t
 		{"mul", multiplication},
 		{"swap", swap},
 		{"mod", mod},
-		
+
 		/*
 		{"pchar", pchar},
 		{"pstr", pstr},
+		*/
+
 		{"rotl", rotl},
+
+		/*
 		{"rotr", rotr},
 		*/
 		{NULL, NULL}

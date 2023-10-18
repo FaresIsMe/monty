@@ -42,7 +42,7 @@ void mod(stack_t **head, unsigned int line)
 void swap(stack_t **head, unsigned int line)
 {
 	stack_t *temp = NULL;
-    int hold;
+	int hold;
 
 	if (!*head || !(*head)->next)
 	{
@@ -50,8 +50,33 @@ void swap(stack_t **head, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 
-    hold = (*head)->n;
+	hold = (*head)->n;
 	temp = (*head)->next;
-    (*head)->n = temp->n;
+	(*head)->n = temp->n;
 	temp->n = hold;
+}
+
+/**
+ * rotl - rotates the stack to the top.
+ * @head: points to the address of the stack's last node added
+ * @line: The line number
+ * 
+ * Return: nothin
+*/
+void rotl(stack_t **head, unsigned int line)
+{
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+
+	stack_t *last = *head;
+	while (last->next != NULL)
+		last = last->next;
+
+	last->next = *head;
+	(*head)->prev = last;
+	*head = (*head)->next;
+	(*head)->prev->next = NULL;
+	(*head)->prev = NULL;
+
+	(void)line;
 }
