@@ -47,7 +47,7 @@ void push(stack_t **head, unsigned int line, char *arg)
 void pall(stack_t **head, unsigned int line)
 {
 	stack_t *temp = *head;
-
+	(void)line;
 	while (temp)
 	{
 		printf("%d\n", temp->n);

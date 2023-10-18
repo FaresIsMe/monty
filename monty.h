@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/types.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -51,7 +50,7 @@ void pop(stack_t **head, unsigned int line);
 
 
 /*stack_functions_2*/
-void *add(stack_t **head, unsigned int line);
+void add(stack_t **head, unsigned int line);
 
 /*String Functions*/
 int _strcmp(char *X, char *Y);

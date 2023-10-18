@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * readingTheFile - A function to read the file
  * @myFile: A pointer to the file that is being read
@@ -39,7 +38,7 @@ void readingTheCommand(char *myLine, size_t lineLength,
 unsigned int myLineN, stack_t **myStack)
 {
 	char *myCommandCode, *value;
-
+	(void)lineLength;
 	myCommandCode = strtok(myLine, "\n ");
 	if (myCommandCode == NULL)
 		return;
@@ -84,7 +83,10 @@ unsigned int myLine, stack_t **myStack))
 		};
 
 	if (_strcmp(myFO, "push") == 0)
+	{
 		push(myStack, myLine, myValue);
+		return (NULL);
+	}
 	for (i = 0; myInstruction[i].opcode != NULL; i++)
 	{
 		if (_strcmp(myInstruction[i].opcode, myFO) == 0)
