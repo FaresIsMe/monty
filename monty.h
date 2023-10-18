@@ -54,6 +54,11 @@ void add(stack_t **head, unsigned int line);
 void sub(stack_t **head, unsigned int line);
 void division(stack_t **head, unsigned int line);
 void multiplication(stack_t **head, unsigned int line);
+
+/*stack_functions_2*/
+
+void mod(stack_t **head, unsigned int line);
+
 /*String Functions*/
 int _strcmp(char *X, char *Y);
 
