@@ -31,7 +31,6 @@ void mod(stack_t **head, unsigned int line)
 
 
 /**
- * 
  * swap - swaps the top two elements of the stack.
  * @head: points to the address of the stack's last node added
  * @line: The line number
