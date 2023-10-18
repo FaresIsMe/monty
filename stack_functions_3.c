@@ -64,12 +64,11 @@ void swap(stack_t **head, unsigned int line)
 */
 void rotl(stack_t **head, unsigned int line)
 {
-	(void)line;
+	stack_t *last = *head;
 
+	(void)line;
 	if (*head == NULL || (*head)->next == NULL)
 		return;
-
-	stack_t *last = *head;
 	while (last->next != NULL)
 		last = last->next;
 
