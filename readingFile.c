@@ -85,6 +85,8 @@ void (*findingMyFunction(char *myFO, char *myValue, unsigned int myLine, stack_t
 		{NULL, NULL}
 		};
 
+	if (myFO[0] == '#')
+		return (NULL);
 	if (_strcmp(myFO, "push") == 0)
 	{
 		push(myStack, myLine, myValue);
@@ -95,7 +97,7 @@ void (*findingMyFunction(char *myFO, char *myValue, unsigned int myLine, stack_t
 		if (_strcmp(myInstruction[i].opcode, myFO) == 0)
 			return (myInstruction[i].f);
 	}
-	fprintf(stderr, "L%d: unknown instruction %s", myLine, myFO);
+	fprintf(stderr, "L%d: unknown instruction %s\n", myLine, myFO);
 	exit(EXIT_FAILURE);
 }
 
