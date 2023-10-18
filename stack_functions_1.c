@@ -64,6 +64,7 @@ void pall(stack_t **head, unsigned int line)
   *
   * Return: nothing
  */
+
 void pint(stack_t **head, unsigned int line)
 {
 	stack_t *temp  = *head;
