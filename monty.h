@@ -57,7 +57,7 @@ void multiplication(stack_t **head, unsigned int line);
 
 /*stack_functions_3*/
 void mod(stack_t **head, unsigned int line);
-void swap(stack_t **head, unsigned int line)
+void swap(stack_t **head, unsigned int line)ك
 
 /*String Functions*/
 int _strcmp(char *X, char *Y);
