@@ -43,6 +43,4 @@ void sub(stack_t **head, unsigned int line)
 	temp = (*head)->next;
 	temp->n = temp->n - temp->prev->n;
 	pop(head, line);
-	*head = temp;
-	(*head)->prev = NULL;
 }
