@@ -71,9 +71,9 @@ void (*findingMyFunction(char *myFO, char *myValue, unsigned int myLine, stack_t
 		{"pop", pop},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		/*
 		{"swap", swap},
-		{"sub", sub},
 		{"div", div},
 		{"mul", mul},
 		{"mod", mod},
