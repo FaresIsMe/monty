@@ -28,3 +28,43 @@ void puttingChar(stack_t **head, unsigned int line)
 		exit(EXIT_FAILURE);
 	}
 }
+
+/**
+ * puttingString - A function to print a string from the
+ * stack following a specfic conditions
+ * @head: A pointer to a pointer that points
+ * to the head of the stack
+ * @line: The line number
+ * 
+ * Return: Nothing
+*/
+
+void puttingString(stack_t **head, unsigned int line)
+{
+	int myVar;
+
+	(void)line;
+	if (!*head || !head)
+	{
+		printf("\n");
+		return;
+	}
+	while (*head != NULL)
+	{
+		myVar = (*head)->n;
+		if ((myVar >= 65 && myVar <= 90) || (myVar >= 97 && myVar <= 122))
+			printf("%c", myVar);
+		else if (myVar == 0)
+		{
+			printf("\n");
+			return;
+		}
+		else
+		{
+			printf("\n");
+			return;
+		}
+		(*head) = (*head)->next;
+	}
+	printf("\n");
+}

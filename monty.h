@@ -62,7 +62,7 @@ void rotl(stack_t **head, unsigned int line);
 
 /*stack_functions_4*/
 void puttingChar(stack_t **head, unsigned int line);
-
+void puttingString(stack_t **head, unsigned int line);
 /*String Functions*/
 int _strcmp(char *X, char *Y);
 

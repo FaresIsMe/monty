@@ -77,13 +77,8 @@ void (*findingMyFunction(char *myFO, char *myValue, unsigned int myLine, stack_t
 		{"swap", swap},
 		{"mod", mod},
 		{"pchar", puttingChar},
-		/*
-
-		{"pstr", pstr},
-		*/
-
+		{"pstr", puttingString},
 		{"rotl", rotl},
-
 		/*
 		{"rotr", rotr},
 		*/
