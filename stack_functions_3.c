@@ -1,7 +1,9 @@
 #include "monty.h"
 
 /**
- * mod - sub the top two elements of the stack.
+ * mod - computes the rest of the division of the second top
+ * element of the stack by the top element of the stack.
+ * 
  * @head: points to the address of the stack's last node added
  * @line: The line number
  *
@@ -25,4 +27,27 @@ void mod(stack_t **head, unsigned int line)
 	temp = (*head)->next;
 	temp->n = temp->n % temp->prev->n;
 	pop(head, line);
+}
+/**
+ * swap - swaps the top two elements of the stack.
+ * @head: points to the address of the stack's last node added
+ * @line: The line number
+ *
+ * Return: nothing
+*/
+void swap(stack_t **head, unsigned int line)
+{
+	stack_t *temp = NULL;
+    int hold;
+
+	if (!*head || !(*head)->next)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
+		exit(EXIT_FAILURE);
+	}
+
+    hold = (*head)->n;
+	temp = (*head)->next;
+    (*head)->n = temp->n;
+	temp->n = hold;
 }
